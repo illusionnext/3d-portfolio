@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { words } from "@/components/constants";
+import Button from "@/components/button";
+import HeroExperience from "@/components/hero-models/hero-experience";
 
 const Hero = () => {
   return (
@@ -8,7 +10,7 @@ const Hero = () => {
       <div className="absolute top-0 left-0 z-10">
         <Image src="/images/bg.png" alt="Background" width={720} height={400} />
       </div>
-      x
+
       <div className="hero-layout">
         {/*  LEFT: HERO CONTENT */}
         <header className="flex flex-col justify-center md:w-full w-screen md:px20 px-5">
@@ -45,9 +47,19 @@ const Hero = () => {
               Hi! I&#39;m Farid, a Full Stack Web Developer with a passion for
               code.
             </p>
+            <Button
+              className="md:w-80 md:h-16 w-60 h-12"
+              id="button"
+              text="See my Work"
+            />
           </div>
         </header>
         {/*  RIGHT: 3D MODEL */}
+        <figure>
+          <div className="hero-3d-layout">
+            <HeroExperience />
+          </div>
+        </figure>
       </div>
     </section>
   );
