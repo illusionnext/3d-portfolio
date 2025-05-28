@@ -3,6 +3,7 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
+import { Room } from "@/components/hero-models/room";
 
 const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" }),
@@ -21,10 +22,12 @@ const HeroExperience = () => {
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 5}
       />
-      <mesh>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="tomato" />
-      </mesh>
+      {/*<mesh>*/}
+      {/*  <boxGeometry args={[1, 1, 1]} />*/}
+      {/*  <meshStandardMaterial color="tomato" />*/}
+      {/*</mesh>*/}
+
+      <Room />
     </Canvas>
   );
 };
